@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  
+    <title>MyApp</title>
+
+  </head>
+  <style>
+
+  </style>
+  <body>
+   
+	<!-- Start of first page: #one -->
+    <div data-role="page" id="one">
+
+	<div role="main" class="ui-content">
+
+		<h3>Login Page</h3>
+		<input type="text" id="username" name="username" placeholder="Username">
+		<input type="password" id="password" name="password" placeholder="Password">
+		<button id="loginButton" class="ui-btn">Login</button>
+
+		<a href="#register">Register</a>
+	</div><!-- /content -->
+
+  </div><!-- /page one -->
+    <% include includes/register.ejs %>
+    <% include includes/dashboard.ejs %>
+  <script>
+  
+  $("#loginButton").click(function(e) {
+
+      var un = $("#username").val();
+      var pw = $("#password").val();
+      $.post( "/login", { username: un,  password: pw})
+      .done(function( data ) {
+          if (data === "Successful Login") {
+              $.mobile.changePage("#dashboard", {
+                  transition: "slide",
+                  reverse: false,
+                  changeHash: false
+              });
+          }
+      });
+  });
+  </script>
+
+
+  </body>
+</html>

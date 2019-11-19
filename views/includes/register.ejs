@@ -1,0 +1,35 @@
+<div data-role="page" id="register" class="page">
+
+    <div role="main" class="ui-content">
+
+        <h3>Register Page</h3>
+        <input type="text" id="usernameRegister" name="username" placeholder="Username">
+        <input type="password" id="passwordRegister" name="password" placeholder="Password">
+        <input type="text" id="emailRegister" name="register" placeholder="E-Mail">
+        <button id="registerButton" class="ui-btn">Register</button>
+
+        <a href="#one">Or Login</a>
+    </div><!-- /content -->
+
+</div><!-- /page one -->
+
+<script>
+    $("#registerButton").click(function(e) {
+        var un = $("#usernameRegister").val();
+        var pw = $("#passwordRegister").val();
+        var em = $("#emailRegister").val();
+        $.post( "/register", { username: un,  password: pw, email:em})
+            .done(function( data ) {
+                if(data ==="Success"){
+                    $.mobile.changePage("#one",{
+                        transition:"slide",
+                        reverse: false,
+                        changeHash:false
+                    });
+                }
+                else {
+                    alert(data);
+                }
+            });
+    });
+</script>
