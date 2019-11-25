@@ -1,0 +1,47 @@
+<div data-role="page" id="menu" class="page">
+    <div role="main" class="ui-content">
+        <h3>Open Labs Menu</h3>
+        <button id="closestRoom" class="ui-btn">Find Closest Room Available</button>
+        <button id="specificRoom" class="ui-btn">Look for a Specific Room</button>
+        <button id="savedRoom" class="ui-btn">Saved Rooms</button>
+        <button id="allRoom" class="ui-btn">List All Rooms</button>
+    </div><!-- /content -->
+</div><!-- /page one -->
+
+<script>
+
+    $("#closestRoom").click(function(e) {
+        $.mobile.changePage("#closestroom", {
+            transition: "slide",
+            reverse: false,
+            changeHash: false
+        });
+    });
+
+
+    $("#specificRoomRoom").click(function(e) {
+        $.mobile.changePage("#dashboard", {
+            transition: "slide",
+            reverse: false,
+            changeHash: false
+        });
+    });
+
+
+    $("#savedRoomRoom").click(function(e) {
+        $.mobile.changePage("#savedrooms", {
+            transition: "slide",
+            reverse: false,
+            changeHash: false
+        });
+    });
+
+
+    $("#allRoom").click(function(e) {
+        $.mobile.changePage("#allrooms", {
+            transition: "slide",
+            reverse: false,
+            changeHash: false
+        });
+    });
+</script>
