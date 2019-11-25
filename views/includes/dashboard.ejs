@@ -1,21 +1,14 @@
 <div data-role="page" id="dashboard" class="page">
 
-    <style>
-        tr, td{
-            text-align:center;
-        }
-    </style>
-
     <div role="main" class="ui-content">
 
         <h3>Timetable Information</h3>
-        <p>Select a room number</p>
-        <select id="selectRoomNumber">
+        <label for="selectRoomNumber">Select Room</label><select id="selectRoomNumber">
             <option value=""></option>
             <option value="A010">A010</option>
         </select>
-        <p>Select which day</p>
-        <select id="selectDay">
+        <br><br>
+        <label for="selectDay">Select day</label><select id="selectDay">
             <option value=""></option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -23,6 +16,7 @@
             <option value="Thursday">Thursday</option>
             <option value="Friday">Friday</option>
         </select>
+        <br><br>
         <button class="ui-btn" id="searchRoom" onclick="searchRoom()">Search</button>
 
         <table id="showTable" style="display:none; width:80%; margin:auto">
@@ -103,26 +97,98 @@
     function searchRoom(){
         var roomNumber = $('#selectRoomNumber').children("option:selected").val();
         var day = $('#selectDay').children("option:selected").val();
-
-        $('.rn').text(roomNumber);
-        $('.d').text(day);
-
         if(roomNumber === "" || day === ""){
             alert("Select both room number and day");
         }else{
+            $('.rn').text(roomNumber);
+            $('.d').text(day);
+
             $.get( "/getTimetable", { room:roomNumber, day:day})
                 .done(function(data){
-                    $("#0900").children(".isFree").html(data[0].isFree);
-                    $("#1000").children(".isFree").html(data[1].isFree);
-                    $("#1100").children(".isFree").html(data[2].isFree);
-                    $("#1200").children(".isFree").html(data[3].isFree);
-                    $("#1300").children(".isFree").html(data[4].isFree);
-                    $("#1400").children(".isFree").html(data[5].isFree);
-                    $("#1500").children(".isFree").html(data[6].isFree);
-                    $("#1600").children(".isFree").html(data[7].isFree);
-                    $("#1700").children(".isFree").html(data[8].isFree);
+                    if(data[0].isFree === 0){
+                        $("#0900").children(".isFree").html("No");
+                        $("#0900").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#0900").children(".isFree").html("Yes");
+                        $("#0900").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[1].isFree === 0){
+                        $("#1000").children(".isFree").html("No");
+                        $("#1000").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1000").children(".isFree").html("Yes");
+                        $("#1000").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[2].isFree === 0){
+                        $("#1100").children(".isFree").html("No");
+                        $("#1100").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1100").children(".isFree").html("Yes");
+                        $("#1100").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[3].isFree === 0){
+                        $("#1200").children(".isFree").html("No");
+                        $("#1200").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1200").children(".isFree").html("Yes");
+                        $("#1200").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[4].isFree === 0){
+                        $("#1300").children(".isFree").html("No");
+                        $("#1300").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1300").children(".isFree").html("Yes");
+                        $("#1300").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[5].isFree === 0){
+                        $("#1400").children(".isFree").html("No");
+                        $("#1400").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1400").children(".isFree").html("Yes");
+                        $("#1400").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[6].isFree === 0){
+                        $("#1500").children(".isFree").html("No");
+                        $("#1500").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1500").children(".isFree").html("Yes");
+                        $("#1500").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[7].isFree === 0){
+                        $("#1600").children(".isFree").html("No");
+                        $("#1600").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1600").children(".isFree").html("Yes");
+                        $("#1600").children(".isFree").css({'color':'green'});
+                    }
+
+                    if(data[7].isFree === 0){
+                        $("#1700").children(".isFree").html("No");
+                        $("#1700").children(".isFree").css({'color':'red'});
+                    }
+                    else{
+                        $("#1700").children(".isFree").html("Yes");
+                        $("#1700").children(".isFree").css({'color':'green'});
+                    }
+
             });
+            $("#showTable").css({'display' : 'table'});
         }
-        $("#showTable").css({'display' : 'table'});
+
     }
 </script>
