@@ -68,6 +68,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -94,7 +95,7 @@
       <workItem from="1574161257578" duration="6864000" />
       <workItem from="1574169094702" duration="605000" />
       <workItem from="1574199700787" duration="397000" />
-      <workItem from="1574687486888" duration="638000" />
+      <workItem from="1574687486888" duration="1039000" />
     </task>
     <servers />
   </component>
