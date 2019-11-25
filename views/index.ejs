@@ -31,6 +31,7 @@
   </div><!-- /page one -->
     <% include includes/register.ejs %>
     <% include includes/dashboard.ejs %>
+    <% include includes/menu.ejs%>
   <script>
   
   $("#loginButton").click(function(e) {
@@ -40,7 +41,7 @@
       $.post( "/login", { username: un,  password: pw})
       .done(function( data ) {
           if (data === "Successful Login") {
-              $.mobile.changePage("#dashboard", {
+              $.mobile.changePage("#menu", {
                   transition: "slide",
                   reverse: false,
                   changeHash: false
