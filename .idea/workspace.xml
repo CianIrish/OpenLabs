@@ -15,6 +15,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -59,6 +64,7 @@
     </expand>
     <select />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
@@ -196,13 +202,24 @@
       </pane>
     </panes>
   </component>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Tpe2OsdpAzhi1rFvJwklQA3Vmb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 88b8504755ba91e7cb54be359379ad01c77d5494
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+=======
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+>>>>>>> 88b8504755ba91e7cb54be359379ad01c77d5494
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,6 +246,7 @@
       <workItem from="1574161257578" duration="6864000" />
       <workItem from="1574169094702" duration="605000" />
       <workItem from="1574199700787" duration="397000" />
+<<<<<<< HEAD
       <workItem from="1574688050426" duration="2587000" />
     </task>
     <servers />
@@ -312,5 +330,24 @@
         </state>
       </provider>
     </entry>
+=======
+      <workItem from="1574687486888" duration="1039000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> 88b8504755ba91e7cb54be359379ad01c77d5494
   </component>
 </project>
